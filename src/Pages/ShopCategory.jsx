@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import './Css/ShopCategory.css'
 import { shopContext } from '../Context/ShopContext'
 import dropdown_icon from '../Component/Assest/dropdown_icon.png'
@@ -20,6 +20,7 @@ function ShopCategory(props) {
       </div>
       <div className='shopcategory-products'>
       {all_product.map((item,i)=>{
+        // eslint-disable-next-line react/prop-types
         if(props.category === item.category){
           return  <Item  key={i} id={item.id} name={item.name} image={item.image}
           new_price={item.new_price} old_price={item.old_price}/>
